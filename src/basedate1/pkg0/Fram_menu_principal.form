@@ -118,7 +118,7 @@
                       <Component id="jLabel1" min="-2" pref="32" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="btn_alta" min="-2" pref="91" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                       <Component id="btn_cambio" min="-2" pref="91" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="btn_baja" min="-2" pref="91" max="-2" attributes="0"/>

@@ -57,7 +57,7 @@ public class Inicio1 extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Sitka Text", 1, 48)); // NOI18N
         jLabel1.setText("BENNY MARCOS & CREACIONES");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 20, 950, 130));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 40, 950, 130));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes_Inicio/Inicio.jpg"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1390, 770));
