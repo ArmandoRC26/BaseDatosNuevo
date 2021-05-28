@@ -231,6 +231,10 @@ pnl_alta_venta pnl_alta_venta=new pnl_alta_venta();  //instanciar el panel del p
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+             Reloj1 c=new Reloj1();
+        c.setVisible(true);
+        dispose(); 
+
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
 
