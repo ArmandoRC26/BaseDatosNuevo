@@ -5,6 +5,9 @@
  */
 package basedate1.pkg0;
 
+import java.net.URL;
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author AAMC
@@ -18,6 +21,7 @@ public class Inicio1 extends javax.swing.JFrame {
         initComponents();
         this.setExtendedState(MAXIMIZED_BOTH);
     }
+   
 
     /**
      * This method is called from within the constructor to initialize the form.
