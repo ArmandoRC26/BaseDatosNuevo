@@ -4,14 +4,14 @@
  * and open the template in the editor.
  */
 package basedate1.pkg0;
-import java.util.*;
-
-public class Reloj1 extends javax.swing.JFrame implements Runnable{
+import java.util.*; //SE HABIA IMPORTADO UNA PAQUETERIA DE RELOJ, PERO COMO USAMOS VARIAS POR ESO
+                    //SE LE PUSO EL "*"
+public class Reloj1 extends javax.swing.JFrame implements Runnable{ //DECLAROMS VAIRABLES A USAR
 String hora, minutos, segundos, ampm;
 Calendar  calendario;
 Thread h1;
   
-    public Reloj1() {
+    public Reloj1() {   //CREAMOS NUESTRO HILO
            initComponents();
    h1=new Thread(this);
    h1.start();
@@ -115,7 +115,7 @@ Thread h1;
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
+        java.awt.EventQueue.invokeLater(new Runnable() {         //CON ESTA LINEA HACEMOS VISIBLE EL RELOJ
             public void run() {
                 new Reloj1().setVisible(true);
             }
@@ -131,7 +131,7 @@ Thread h1;
     // End of variables declaration//GEN-END:variables
 
     @Override
-    public void run() {
+    public void run() {   //SIRVE PARA INICIALIZAR EL RELOJ
         Thread ct= Thread.currentThread();
         while(ct==h1){
          calcula();   
@@ -145,7 +145,7 @@ Thread h1;
    
     }
 
-    private void calcula() {
+    private void calcula() {    //SIRVE PARA DARLE FORMATO A LA HORA
          Calendar calendario = new GregorianCalendar();
          Date fechaHoraActual = new Date();
          
@@ -157,6 +157,7 @@ Thread h1;
             hora = h>9?""+h:"0"+h;
             
          }else{
+             
              hora= calendario.get(Calendar.HOUR_OF_DAY)>9?""+calendario.get(Calendar.HOUR_OF_DAY):"0"+calendario.get(Calendar.HOUR_OF_DAY);
        
          }
@@ -164,4 +165,6 @@ Thread h1;
          segundos= calendario.get(Calendar.SECOND)>9?""+calendario.get(Calendar.SECOND):"0"+calendario.get(Calendar.SECOND);
     }
     }
+
+
 

@@ -11,6 +11,6 @@ package basedate1.pkg0;
 public class Main {
   public static void main (String []args){
                  new Reloj1();
-      
+      //INICIALIZAMOS NUESTRO MÉTODO PARA QUE SE VISUALICE EN PANTALLA
   }  
 }
