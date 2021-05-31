@@ -1,5 +1,7 @@
 package basedate1.pkg0;
 
+import basedate1.pkg0.Reloj1;
+import basedate1.pkg0.pnl_alta_venta;
 import java.awt.CardLayout;
 import java.awt.Dimension;
 import java.net.URL;
@@ -49,16 +51,18 @@ pnl_alta_venta pnl_alta_venta=new pnl_alta_venta();  //instanciar el panel del p
         jSeparator1 = new javax.swing.JSeparator();
         jPanel3 = new javax.swing.JPanel();
         btn_buscar2 = new javax.swing.JToggleButton();
-        btn_buscar3 = new javax.swing.JToggleButton();
+        btn4 = new javax.swing.JToggleButton();
         jButton3 = new javax.swing.JToggleButton();
         btn_buscar4 = new javax.swing.JToggleButton();
         btn_buscar5 = new javax.swing.JToggleButton();
         jSeparator2 = new javax.swing.JSeparator();
         pnl_vista_principal = new javax.swing.JPanel();
+        jPanel4 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Sistema de ventas BENNY MARCOS & CREACIONES");
         setIconImage(getIconImage());
+        setUndecorated(true);
 
         jPanel1.setBackground(new java.awt.Color(102, 102, 255));
 
@@ -157,7 +161,7 @@ pnl_alta_venta pnl_alta_venta=new pnl_alta_venta();  //instanciar el panel del p
                 .addComponent(btn_alta)
                 .addGap(18, 18, 18)
                 .addComponent(btn_cambio)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 89, Short.MAX_VALUE)
                 .addComponent(btn_baja)
                 .addGap(18, 18, 18)
                 .addComponent(btn_buscar)
@@ -183,13 +187,18 @@ pnl_alta_venta pnl_alta_venta=new pnl_alta_venta();  //instanciar el panel del p
             }
         });
 
-        btn_buscar3.setBackground(new java.awt.Color(204, 204, 204));
-        btn_buscar3.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        btn_buscar3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/addempleado.png"))); // NOI18N
-        btn_buscar3.setText("REGISTRAR EMPLEADO");
-        btn_buscar3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btn_buscar3.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        btn_buscar3.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+        btn4.setBackground(new java.awt.Color(204, 204, 204));
+        btn4.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        btn4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/addempleado.png"))); // NOI18N
+        btn4.setText("REGISTRAR EMPLEADO");
+        btn4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btn4.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        btn4.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+        btn4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn4ActionPerformed(evt);
+            }
+        });
 
         jButton3.setBackground(new java.awt.Color(204, 204, 204));
         jButton3.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
@@ -229,17 +238,17 @@ pnl_alta_venta pnl_alta_venta=new pnl_alta_venta();  //instanciar el panel del p
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(31, 31, 31)
-                .addComponent(btn_buscar3, javax.swing.GroupLayout.DEFAULT_SIZE, 182, Short.MAX_VALUE)
+                .addComponent(btn4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(30, 30, 30)
                 .addComponent(btn_buscar4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(30, 30, 30)
-                .addComponent(btn_buscar5, javax.swing.GroupLayout.DEFAULT_SIZE, 156, Short.MAX_VALUE)
+                .addComponent(btn_buscar5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(37, 37, 37)
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 12, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(34, 34, 34)
-                .addComponent(btn_buscar2, javax.swing.GroupLayout.DEFAULT_SIZE, 138, Short.MAX_VALUE)
+                .addComponent(btn_buscar2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(37, 37, 37)
-                .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, 127, Short.MAX_VALUE)
+                .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(21, 21, 21))
         );
         jPanel3Layout.setVerticalGroup(
@@ -250,7 +259,7 @@ pnl_alta_venta pnl_alta_venta=new pnl_alta_venta();  //instanciar el panel del p
                     .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
                     .addComponent(btn_buscar5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btn_buscar4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btn_buscar3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btn4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btn_buscar2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jSeparator2))
                 .addGap(12, 12, 12))
@@ -258,6 +267,19 @@ pnl_alta_venta pnl_alta_venta=new pnl_alta_venta();  //instanciar el panel del p
 
         pnl_vista_principal.setBackground(new java.awt.Color(102, 102, 255));
         pnl_vista_principal.setLayout(new java.awt.CardLayout());
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1017, Short.MAX_VALUE)
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 526, Short.MAX_VALUE)
+        );
+
+        pnl_vista_principal.add(jPanel4, "card2");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -282,7 +304,7 @@ pnl_alta_venta pnl_alta_venta=new pnl_alta_venta();  //instanciar el panel del p
                         .addComponent(pnl_vista_principal, javax.swing.GroupLayout.PREFERRED_SIZE, 526, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(0, 12, Short.MAX_VALUE))
+                .addGap(0, 188, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -293,9 +315,7 @@ pnl_alta_venta pnl_alta_venta=new pnl_alta_venta();  //instanciar el panel del p
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 247, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -330,6 +350,14 @@ pnl_alta_venta pnl_alta_venta=new pnl_alta_venta();  //instanciar el panel del p
     private void btn_buscar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_buscar2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btn_buscar2ActionPerformed
+
+    private void btn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn4ActionPerformed
+
+        Registro_empleados R = new Registro_empleados();
+        R.setVisible(true);
+        
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -367,11 +395,11 @@ pnl_alta_venta pnl_alta_venta=new pnl_alta_venta();  //instanciar el panel del p
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JToggleButton btn4;
     private javax.swing.JToggleButton btn_alta;
     private javax.swing.JToggleButton btn_baja;
     private javax.swing.JToggleButton btn_buscar;
     private javax.swing.JToggleButton btn_buscar2;
-    private javax.swing.JToggleButton btn_buscar3;
     private javax.swing.JToggleButton btn_buscar4;
     private javax.swing.JToggleButton btn_buscar5;
     private javax.swing.JToggleButton btn_cambio;
@@ -381,6 +409,7 @@ pnl_alta_venta pnl_alta_venta=new pnl_alta_venta();  //instanciar el panel del p
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JPanel pnl_vista_principal;
