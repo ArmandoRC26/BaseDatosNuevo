@@ -7,17 +7,27 @@ package basedate1.pkg0;
 
 import java.net.URL;
 import javax.swing.ImageIcon;
+import basedate1.pkg0.Reloj1;
+import basedate1.pkg0.pnl_alta_venta;
+import java.awt.CardLayout;
+import java.awt.Dimension;
+import java.net.URL;
+import java.util.HashSet;
+import javax.swing.ImageIcon;
+import javax.swing.SwingUtilities;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
  * @author AAMC
  */
-public class Inicio1 extends javax.swing.JFrame {
+public class Inicio11 extends javax.swing.JFrame {
 
     /**
      * Creates new form Inicio
      */
-    public Inicio1() {
+    public Inicio11() {
         initComponents();
         this.setExtendedState(MAXIMIZED_BOTH);
     }
@@ -61,7 +71,7 @@ public class Inicio1 extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Sitka Text", 1, 48)); // NOI18N
         jLabel1.setText("BENNY MARCOS & CREACIONES");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 40, 950, 130));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 40, 950, 130));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes_Inicio/Inicio.jpg"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1390, 770));
@@ -71,9 +81,11 @@ public class Inicio1 extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        Fram_menu_principal c=new Fram_menu_principal();
-        c.setVisible(true);
-        dispose();
+       Fram_menu_principal c=new Fram_menu_principal();
+       c.setVisible(true);
+       
+        
+       
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -93,21 +105,23 @@ public class Inicio1 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Inicio1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Inicio11.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Inicio1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Inicio11.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Inicio1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Inicio11.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Inicio1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Inicio11.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Inicio1().setVisible(true);
+                new Inicio11().setVisible(true);
             }
         });
     }

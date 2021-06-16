@@ -12,7 +12,7 @@ Calendar  calendario;
 Thread h1;
   
     public Reloj1() {   //CREAMOS NUESTRO HILO
-           initComponents();
+           initComponents(); //inicializamos nuestro hilo ya creado
    h1=new Thread(this);
    h1.start();
     
@@ -138,7 +138,8 @@ Thread h1;
          calcula();   
      breloj.setText(hora+":"+minutos+":"+segundos+":"+ampm);
      try{
-             Thread.sleep(1000);
+             Thread.sleep(1000); //1 segundo equivale a 1000 milisegundos, nos sirve para especificar cada cuanto tiene 
+             //que actualizarse 
      } catch(InterruptedException e ){ }
              
    

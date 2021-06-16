@@ -17,7 +17,7 @@ public class BASEDATE10 {
     public static void main(String[] args) {
         // TODO code application logic here
 
-        Inicio1 c=new Inicio1();
+        Inicio11 c=new Inicio11();
         c.setVisible(true);
     }
     
