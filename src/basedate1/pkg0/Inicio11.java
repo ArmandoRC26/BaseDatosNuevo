@@ -74,7 +74,7 @@ public class Inicio11 extends javax.swing.JFrame {
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 40, 950, 130));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes_Inicio/Inicio.jpg"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1390, 770));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1360, 790));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
