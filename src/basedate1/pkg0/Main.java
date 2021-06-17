@@ -13,6 +13,7 @@ public class Main {
   public static void main (String []args){
       Reloj1 reloj1 = new Reloj1();
       //INICIALIZAMOS NUESTRO MÉTODO PARA QUE SE VISUALICE EN PANTALLA
+      Registroem Registroem =new Registroem();
   }  
 }
 

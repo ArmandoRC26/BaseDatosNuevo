@@ -48,7 +48,7 @@ Thread h1;
         getContentPane().add(breloj, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 110, 1150, 490));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes_Inicio/Inicio.jpg"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1390, 770));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1360, 740));
 
         jLabel4.setFont(new java.awt.Font("Arial", 1, 80)); // NOI18N
         jLabel4.setText("BIENVENIDOS");
