@@ -26,16 +26,37 @@ public class R_Empleados extends javax.swing.JFrame {
 
     
     DefaultTableModel modelo;
+    String [] titulos= {"Folio", "Nombre", "Apellido","Edad","Número"};
+    String[] datos= new String [5];
+    
+    
     public R_Empleados() {
-        initComponents();
-        modelo = new DefaultTableModel();
-        modelo.addColumn("Nombre");
-        modelo.addColumn("Apellido");
-        modelo.addColumn("Edad");
-        modelo.addColumn("Folio");
-        modelo.addColumn("Número");
-        this.tabla.setModel(modelo);
+       
     }
+        void CargarTabla(String Valor){
+        String sSQL="";
+        modelo=new DefaultTableModel(null, titulos);
+              conectar mysql=new conectar();
+               Connection con=mysql.conectar();
+               sSQL="SELECT * FROM r_empleados WHERE Folio LIKE '%"+Valor+"%'";
+               try{
+                   Statement st=(Statement) con.createStatement();
+                   ResultSet rs=st.executeQuery(sSQL);
+               while(rs.next()){
+                   datos[0]=rs.getString("Folio");
+                    datos[1]=rs.getString("Nombre");
+                    datos[2]=rs.getString("Apellido");
+                    datos[3]=rs.getString("Edad");
+                    datos[4]=rs.getString("Teléfono");
+                    modelo.addRow(datos);
+               }
+            tabla.setModel(modelo);
+               }catch(SQLException ex){
+                   JOptionPane.showMessageDialog(null,"ERROR"+ex, "ERROR", JOptionPane.ERROR_MESSAGE);
+               }
+        }
+    
+       
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -382,27 +403,38 @@ public class R_Empleados extends javax.swing.JFrame {
     }//GEN-LAST:event_txtcolumnaActionPerformed
 
     private void btnagregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnagregarActionPerformed
+conectar mysql= new conectar();
+Connection con =mysql.conectar();
+String Fo,nom,ap1,num, eda;
+String sSQL="";
+
+Fo=txtfolio.getText();
+nom=txtnombre.getText();
+ap1=txtapellido.getText();
+eda=txtedad.getText();
+num=txttelefono.getText();
+ sSQL= "INSERT INTO r_empleados(Folio, Nombre, Apellido, Edad,Teléfono)"
+ +"VALUES (?,?,?,?,?)";
 
         try{
+     java.sql.PreparedStatement pst= con.prepareStatement(sSQL);
+       pst.setString(1,Fo);
+       pst.setString(2,nom);
+       pst.setString(3,ap1);
+       pst.setString(4,eda);
+       pst.setString(5,num);
+       int n=pst.executeUpdate();
+       if(n>0){
+           JOptionPane.showMessageDialog(null, "EL resgitros se ingreso", "REGISTRO", JOptionPane.INFORMATION_MESSAGE);
+       CargarTabla(Fo);
+       
+       }
       
+        } catch (SQLException ex) {
+      JOptionPane.showMessageDialog(null, "ERROR "+ ex, "REGISTRO", JOptionPane.ERROR); 
       
-  String Usuarios[]=new String[5];
-PreparedStatement info = conectar.PreparedStatement("Insert Into R_Empleados (Folio,Nombre, Apellidos, Edad, Teléfono) VALUES (?,?,?,?,?)");
-    info.setString(1, txtnombre.getText());
-    info.setString(2, txtapellido.getText());
-    info.setString(3, txtedad.getText());
-    info.setString(4, txtfolio.getText());
-   info.setString(5, txttelefono.getText());
-     info.executeUpdate();
-   JOptionPane.showMessageDialog(null, "Datos guardados");
-   
-    
- 
-    
-    
-    } catch (SQLException ex) {
-        Logger.getLogger(R_Empleados.class.getName()).log(Level.SEVERE, null, ex);
     }//GEN-LAST:event_btnagregarActionPerformed
+   
     }
     private void btneliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btneliminarActionPerformed
         // TODO add your handling code here:
