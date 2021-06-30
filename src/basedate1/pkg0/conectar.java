@@ -5,30 +5,23 @@
  */
 package basedate1.pkg0;
 
-import com.mysql.jdbc.PreparedStatement;
-import com.mysql.jdbc.Statement;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.*;
+import javax.swing.JOptionPane;
 
 public class conectar {
-
-    static PreparedStatement PreparedStatement(String insert_Into_R_Empleados_FolioNombre_Apell) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-     Connection conectar=null;
-     Statement st;
-    public Connection conexion(){
-        try{
-            Class.forName("com.mysql.jdbc.Driver");
-            conectar=DriverManager.getConnection("jdbc:mysql://localhost/benny", "root", "");
-            
-        }catch (Exception e){
-            System.out.print("Error: "+e);
-        }
-        return conectar;
-    }
-    
-    
-}
+    Connection conectar=null;
+ public Connection conexion(){   
+  try{
+    Class.forName("org.gjt.mm.mysql.Driver");//.newInstance();
+    conectar=DriverManager.getConnection("jdbc:mysql://localhost/benny","root","");
    
-
+    
+  }catch(SQLException ex) {
+             JOptionPane.showMessageDialog(null, "Error de conexion de la base de datos");
+                                   }catch(ClassNotFoundException ex) {                                                                }
+  return conectar;
+}
+}
