@@ -16,7 +16,7 @@ public class conectar {
  public Connection conexion(){   
   try{
     Class.forName("org.gjt.mm.mysql.Driver");//.newInstance();
-    conectar=DriverManager.getConnection("jdbc:mysql://localhost/benny","root","Holamundo123-");
+    conectar=DriverManager.getConnection("jdbc:mysql://localhost/benny","root","");
    
     
   }catch(SQLException ex) {
