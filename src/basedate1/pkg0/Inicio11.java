@@ -8,7 +8,7 @@ package basedate1.pkg0;
 import java.net.URL;
 import javax.swing.ImageIcon;
 import basedate1.pkg0.Reloj1;
-import basedate1.pkg0.pnl_alta_venta;
+
 import java.awt.CardLayout;
 import java.awt.Dimension;
 import java.net.URL;

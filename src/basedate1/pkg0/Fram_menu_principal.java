@@ -3,8 +3,7 @@ package basedate1.pkg0;
 
 import basedate1.pkg0.Reloj1;
 import basedate1.pkg0.Reloj1;
-import basedate1.pkg0.pnl_alta_venta;
-import basedate1.pkg0.pnl_alta_venta;
+
 import java.awt.CardLayout;
 import java.awt.Dimension;
 import java.net.URL;
@@ -15,20 +14,21 @@ import javax.swing.table.DefaultTableModel;
 
 public final class Fram_menu_principal extends javax.swing.JFrame {
     //Reloj1 reloj1=new Reloj1();//Instancia el panel del Main de Reloj
-pnl_alta_venta pnl_alta_venta=new pnl_alta_venta();  //instanciar el panel del primer boton alta_venta
-    CardLayout vista;//El CardLayout permite organizar paneles en forma de una pila de cartas vista desde arriba
+CardLayout vista;//El CardLayout permite organizar paneles en forma de una pila de cartas vista desde arriba
+   //NUNCA QUITAR ESTE CODIGO
    
    
     
     
     public Fram_menu_principal() {
         initComponents();
-       // setPreferredSize(new Dimension(5000,2500) );
+      // setPreferredSize(new Dimension(5000,2500) );
 //this.setLocationRelativeTo(null); //para centrar la pantalla
         setExtendedState(MAXIMIZED_BOTH);//constructor para maximizar la pantalla
         iconoFormulario();//llamar el método en nuestro constructor
         vista=(CardLayout) pnl_vista_principal.getLayout();//variable vista de cardlayout que ejecuta la vista en forma de castillo
         //vista=(CardLayout) reloj1.getLayout();
+        //NUNCA QUITAR EL CODIGO, PERMITE DARLE LAS DIMENSIONES CORRECTAS AL FRAME PRINCIPAL
     }
 
     public void iconoFormulario() {
@@ -65,13 +65,10 @@ pnl_alta_venta pnl_alta_venta=new pnl_alta_venta();  //instanciar el panel del p
         pnl_vista_principal = new javax.swing.JPanel();
         DesktopMain = new javax.swing.JDesktopPane();
         jLabel3 = new javax.swing.JLabel();
-        jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        jMenu2 = new javax.swing.JMenu();
-        jMenu3 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Sistema de ventas BENNY MARCOS & CREACIONES");
+        setFocusTraversalPolicyProvider(true);
         setIconImage(getIconImage());
         setUndecorated(true);
         setPreferredSize(new java.awt.Dimension(1325, 960));
@@ -259,16 +256,16 @@ pnl_alta_venta pnl_alta_venta=new pnl_alta_venta();  //instanciar el panel del p
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btn_buscar3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btn_buscar3, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
                 .addGap(187, 187, 187)
                 .addComponent(jLabel2)
                 .addGap(184, 184, 184)
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 12, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(34, 34, 34)
-                .addComponent(btn_buscar2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btn_buscar2, javax.swing.GroupLayout.DEFAULT_SIZE, 131, Short.MAX_VALUE)
                 .addGap(37, 37, 37)
-                .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(21, 21, 21))
+                .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -292,11 +289,11 @@ pnl_alta_venta pnl_alta_venta=new pnl_alta_venta();  //instanciar el panel del p
         DesktopMain.setLayout(DesktopMainLayout);
         DesktopMainLayout.setHorizontalGroup(
             DesktopMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1141, Short.MAX_VALUE)
+            .addGap(0, 1121, Short.MAX_VALUE)
         );
         DesktopMainLayout.setVerticalGroup(
             DesktopMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 526, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
 
         jLabel3.setText("SYTEM.OUT.V1.01");
@@ -310,11 +307,10 @@ pnl_alta_venta pnl_alta_venta=new pnl_alta_venta();  //instanciar el panel del p
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(DesktopMain, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(pnl_vista_principal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(DesktopMain, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(1236, 1236, 1236)
+                .addComponent(pnl_vista_principal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(290, 290, 290)
@@ -325,43 +321,30 @@ pnl_alta_venta pnl_alta_venta=new pnl_alta_venta();  //instanciar el panel del p
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(pnl_vista_principal, javax.swing.GroupLayout.PREFERRED_SIZE, 526, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(DesktopMain, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(18, 18, 18)
-                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(DesktopMain))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jLabel3)
-                .addGap(0, 188, Short.MAX_VALUE))
+                .addGap(211, 211, 211))
         );
-
-        jMenu1.setText("EMPLEADOS");
-        jMenuBar1.add(jMenu1);
-
-        jMenu2.setText("CLIENTES");
-        jMenuBar1.add(jMenu2);
-
-        jMenu3.setText("MARCOS");
-        jMenuBar1.add(jMenu3);
-
-        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1400, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1389, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 937, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -372,10 +355,7 @@ pnl_alta_venta pnl_alta_venta=new pnl_alta_venta();  //instanciar el panel del p
     }//GEN-LAST:event_btn_salirActionPerformed
 
     private void btn_altaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_altaActionPerformed
-       pnl_vista_principal.add(pnl_alta_venta,"alta");// alta es una palabra que se usará como referencia
-       vista.show(pnl_vista_principal,"alta");//variable del card layout + referencia "alta"
-       SwingUtilities.updateComponentTreeUI(this);//instanciar el metodo que actualiza el panel 
-       this.repaint();//actualiza la vista
+      
     }//GEN-LAST:event_btn_altaActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -477,10 +457,6 @@ pnl_alta_venta pnl_alta_venta=new pnl_alta_venta();  //instanciar el panel del p
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenu jMenu3;
-    private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
