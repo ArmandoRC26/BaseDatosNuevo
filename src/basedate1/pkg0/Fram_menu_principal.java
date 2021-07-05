@@ -406,7 +406,12 @@ CardLayout vista;//El CardLayout permite organizar paneles en forma de una pila 
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void btn_buscar3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_buscar3ActionPerformed
-        // TODO add your handling code here:
+    CUADROS formOne = new CUADROS();
+        DesktopMain.add(formOne);
+        Dimension desktopSize = DesktopMain.getSize();
+        Dimension FrameSize = formOne.getSize();
+        formOne.setLocation((desktopSize.width - FrameSize.width)/2, (desktopSize.height- FrameSize.height)/2);
+        formOne.show();
     }//GEN-LAST:event_btn_buscar3ActionPerformed
 
     /**
