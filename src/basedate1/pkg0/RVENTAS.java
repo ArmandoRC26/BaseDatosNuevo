@@ -9,12 +9,12 @@ package basedate1.pkg0;
  *
  * @author arman
  */
-public class HVENTAS extends javax.swing.JInternalFrame {
+public class RVENTAS extends javax.swing.JInternalFrame {
 
     /**
-     * Creates new form HVENTAS
+     * Creates new form RVENTAS
      */
-    public HVENTAS() {
+    public RVENTAS() {
         initComponents();
     }
 
