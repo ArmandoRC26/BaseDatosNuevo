@@ -57,6 +57,8 @@ public class calculadora extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        txtpantalla.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+
         jButton1.setBackground(new java.awt.Color(0, 102, 102));
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("1");
