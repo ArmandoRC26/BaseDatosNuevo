@@ -51,18 +51,16 @@ pnl_alta_venta pnl_alta_venta=new pnl_alta_venta();  //instanciar el panel del p
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         btn_alta = new javax.swing.JToggleButton();
-        btn_cambio = new javax.swing.JToggleButton();
-        btn_baja = new javax.swing.JToggleButton();
         btn_buscar = new javax.swing.JToggleButton();
         btn_salir = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
+        btn4 = new javax.swing.JToggleButton();
+        jButton1 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         btn_buscar2 = new javax.swing.JToggleButton();
-        btn4 = new javax.swing.JToggleButton();
         jButton3 = new javax.swing.JToggleButton();
-        btn_buscar4 = new javax.swing.JToggleButton();
-        btn_buscar5 = new javax.swing.JToggleButton();
         jSeparator2 = new javax.swing.JSeparator();
+        jLabel2 = new javax.swing.JLabel();
         pnl_vista_principal = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
 
@@ -84,6 +82,8 @@ pnl_alta_venta pnl_alta_venta=new pnl_alta_venta();  //instanciar el panel del p
         btn_alta.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         btn_alta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/alta.png"))); // NOI18N
         btn_alta.setText("REGISTRAR VENTA");
+        btn_alta.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btn_alta.setFocusable(false);
         btn_alta.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btn_alta.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         btn_alta.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
@@ -93,26 +93,12 @@ pnl_alta_venta pnl_alta_venta=new pnl_alta_venta();  //instanciar el panel del p
             }
         });
 
-        btn_cambio.setBackground(new java.awt.Color(204, 204, 204));
-        btn_cambio.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        btn_cambio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cambio.png"))); // NOI18N
-        btn_cambio.setText("ACTUALIZAR VENTA");
-        btn_cambio.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btn_cambio.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        btn_cambio.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
-
-        btn_baja.setBackground(new java.awt.Color(204, 204, 204));
-        btn_baja.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        btn_baja.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/baja.png"))); // NOI18N
-        btn_baja.setText("ELIMINAR VENTA");
-        btn_baja.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btn_baja.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        btn_baja.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
-
         btn_buscar.setBackground(new java.awt.Color(204, 204, 204));
         btn_buscar.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         btn_buscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/buscar.png"))); // NOI18N
-        btn_buscar.setText("BUSCAR");
+        btn_buscar.setText("CONSULTAS");
+        btn_buscar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btn_buscar.setFocusable(false);
         btn_buscar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btn_buscar.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         btn_buscar.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
@@ -126,6 +112,8 @@ pnl_alta_venta pnl_alta_venta=new pnl_alta_venta();  //instanciar el panel del p
         btn_salir.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         btn_salir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/salir.png"))); // NOI18N
         btn_salir.setText("SALIR");
+        btn_salir.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btn_salir.setFocusable(false);
         btn_salir.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btn_salir.setVerifyInputWhenFocusTarget(false);
         btn_salir.setVerticalAlignment(javax.swing.SwingConstants.TOP);
@@ -138,6 +126,34 @@ pnl_alta_venta pnl_alta_venta=new pnl_alta_venta();  //instanciar el panel del p
 
         jSeparator1.setForeground(new java.awt.Color(255, 255, 0));
 
+        btn4.setBackground(new java.awt.Color(204, 204, 204));
+        btn4.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        btn4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/addempleado.png"))); // NOI18N
+        btn4.setText("REGISTRAR EMPLEADO");
+        btn4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btn4.setFocusable(false);
+        btn4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btn4.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        btn4.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+        btn4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn4ActionPerformed(evt);
+            }
+        });
+
+        jButton1.setBackground(new java.awt.Color(204, 204, 204));
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/CLIENTE.png"))); // NOI18N
+        jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton1.setFocusCycleRoot(true);
+        jButton1.setFocusable(false);
+        jButton1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        jButton1.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -148,15 +164,15 @@ pnl_alta_venta pnl_alta_venta=new pnl_alta_venta();  //instanciar el panel del p
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(10, 10, 10)
                         .addComponent(btn_salir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(btn4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(btn_buscar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(btn_alta, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel1)
-                            .addComponent(btn_cambio, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btn_baja, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btn_buscar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.LEADING))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
@@ -164,15 +180,15 @@ pnl_alta_venta pnl_alta_venta=new pnl_alta_venta();  //instanciar el panel del p
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(23, 23, 23)
                 .addComponent(btn_alta)
                 .addGap(18, 18, 18)
-                .addComponent(btn_cambio)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
-                .addComponent(btn_baja)
+                .addComponent(btn4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
-                .addComponent(btn_buscar)
+                .addComponent(jButton1)
                 .addGap(18, 18, 18)
+                .addComponent(btn_buscar, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btn_salir, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -194,19 +210,6 @@ pnl_alta_venta pnl_alta_venta=new pnl_alta_venta();  //instanciar el panel del p
             }
         });
 
-        btn4.setBackground(new java.awt.Color(204, 204, 204));
-        btn4.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        btn4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/addempleado.png"))); // NOI18N
-        btn4.setText("REGISTRAR EMPLEADO");
-        btn4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btn4.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        btn4.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
-        btn4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn4ActionPerformed(evt);
-            }
-        });
-
         jButton3.setBackground(new java.awt.Color(204, 204, 204));
         jButton3.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/reloj.png"))); // NOI18N
@@ -220,37 +223,20 @@ pnl_alta_venta pnl_alta_venta=new pnl_alta_venta();  //instanciar el panel del p
             }
         });
 
-        btn_buscar4.setBackground(new java.awt.Color(204, 204, 204));
-        btn_buscar4.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        btn_buscar4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cambioempleado.png"))); // NOI18N
-        btn_buscar4.setText("ACTUALIZAR EMPLEADO");
-        btn_buscar4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btn_buscar4.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        btn_buscar4.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
-
-        btn_buscar5.setBackground(new java.awt.Color(204, 204, 204));
-        btn_buscar5.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        btn_buscar5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/bajaempleado.png"))); // NOI18N
-        btn_buscar5.setText("ELIMINAR EMPLEADO");
-        btn_buscar5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btn_buscar5.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        btn_buscar5.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
-
         jSeparator2.setForeground(new java.awt.Color(255, 204, 0));
         jSeparator2.setOrientation(javax.swing.SwingConstants.VERTICAL);
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/icono_benny.png"))); // NOI18N
+        jLabel2.setText("jLabel2");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(31, 31, 31)
-                .addComponent(btn4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(30, 30, 30)
-                .addComponent(btn_buscar4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(30, 30, 30)
-                .addComponent(btn_buscar5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(37, 37, 37)
+                .addGap(505, 505, 505)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 288, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 12, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(34, 34, 34)
                 .addComponent(btn_buscar2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -263,10 +249,8 @@ pnl_alta_venta pnl_alta_venta=new pnl_alta_venta();  //instanciar el panel del p
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
-                    .addComponent(btn_buscar5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btn_buscar4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btn4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, 129, Short.MAX_VALUE)
                     .addComponent(btn_buscar2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jSeparator2))
                 .addGap(12, 12, 12))
@@ -279,7 +263,7 @@ pnl_alta_venta pnl_alta_venta=new pnl_alta_venta();  //instanciar el panel del p
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1097, Short.MAX_VALUE)
+            .addGap(0, 1131, Short.MAX_VALUE)
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -310,8 +294,8 @@ pnl_alta_venta pnl_alta_venta=new pnl_alta_venta();  //instanciar el panel del p
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(pnl_vista_principal, javax.swing.GroupLayout.PREFERRED_SIZE, 526, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(0, 247, Short.MAX_VALUE))
+                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(0, 259, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -326,7 +310,7 @@ pnl_alta_venta pnl_alta_venta=new pnl_alta_venta();  //instanciar el panel del p
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 20, Short.MAX_VALUE))
+                .addGap(0, 9, Short.MAX_VALUE))
         );
 
         pack();
@@ -371,6 +355,12 @@ pnl_alta_venta pnl_alta_venta=new pnl_alta_venta();  //instanciar el panel del p
         // TODO add your handling code here:
     }//GEN-LAST:event_btn4ActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        CLIENTES c=new CLIENTES();
+        c.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -409,15 +399,13 @@ pnl_alta_venta pnl_alta_venta=new pnl_alta_venta();  //instanciar el panel del p
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JToggleButton btn4;
     private javax.swing.JToggleButton btn_alta;
-    private javax.swing.JToggleButton btn_baja;
     private javax.swing.JToggleButton btn_buscar;
     private javax.swing.JToggleButton btn_buscar2;
-    private javax.swing.JToggleButton btn_buscar4;
-    private javax.swing.JToggleButton btn_buscar5;
-    private javax.swing.JToggleButton btn_cambio;
     private javax.swing.JButton btn_salir;
+    private javax.swing.JButton jButton1;
     private javax.swing.JToggleButton jButton3;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
