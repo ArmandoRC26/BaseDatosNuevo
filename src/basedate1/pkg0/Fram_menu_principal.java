@@ -62,6 +62,7 @@ CardLayout vista;//El CardLayout permite organizar paneles en forma de una pila 
         jSeparator2 = new javax.swing.JSeparator();
         jLabel2 = new javax.swing.JLabel();
         btn_buscar3 = new javax.swing.JToggleButton();
+        btn_buscar4 = new javax.swing.JToggleButton();
         pnl_vista_principal = new javax.swing.JPanel();
         DesktopMain = new javax.swing.JDesktopPane();
         jLabel3 = new javax.swing.JLabel();
@@ -250,6 +251,18 @@ CardLayout vista;//El CardLayout permite organizar paneles en forma de una pila 
             }
         });
 
+        btn_buscar4.setBackground(new java.awt.Color(204, 204, 204));
+        btn_buscar4.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        btn_buscar4.setText("HISTORIAL VENTAS");
+        btn_buscar4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btn_buscar4.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        btn_buscar4.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+        btn_buscar4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_buscar4ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -257,7 +270,9 @@ CardLayout vista;//El CardLayout permite organizar paneles en forma de una pila 
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(btn_buscar3, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
-                .addGap(187, 187, 187)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btn_buscar4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(62, 62, 62)
                 .addComponent(jLabel2)
                 .addGap(184, 184, 184)
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 12, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -272,6 +287,7 @@ CardLayout vista;//El CardLayout permite organizar paneles en forma de una pila 
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btn_buscar4, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btn_buscar3, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -414,6 +430,15 @@ CardLayout vista;//El CardLayout permite organizar paneles en forma de una pila 
         formOne.show();
     }//GEN-LAST:event_btn_buscar3ActionPerformed
 
+    private void btn_buscar4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_buscar4ActionPerformed
+HVENTAS formOne = new HVENTAS();
+        DesktopMain.add(formOne);
+        Dimension desktopSize = DesktopMain.getSize();
+        Dimension FrameSize = formOne.getSize();
+        formOne.setLocation((desktopSize.width - FrameSize.width)/2, (desktopSize.height- FrameSize.height)/2);
+        formOne.show();      
+    }//GEN-LAST:event_btn_buscar4ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -456,6 +481,7 @@ CardLayout vista;//El CardLayout permite organizar paneles en forma de una pila 
     private javax.swing.JToggleButton btn_buscar;
     private javax.swing.JToggleButton btn_buscar2;
     private javax.swing.JToggleButton btn_buscar3;
+    private javax.swing.JToggleButton btn_buscar4;
     private javax.swing.JButton btn_salir;
     private javax.swing.JButton jButton1;
     private javax.swing.JToggleButton jButton3;
