@@ -57,7 +57,6 @@ CardLayout vista;//El CardLayout permite organizar paneles en forma de una pila 
         btn4 = new javax.swing.JToggleButton();
         jButton1 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
-        btn_buscar2 = new javax.swing.JToggleButton();
         jButton3 = new javax.swing.JToggleButton();
         jSeparator2 = new javax.swing.JSeparator();
         jLabel2 = new javax.swing.JLabel();
@@ -207,19 +206,6 @@ CardLayout vista;//El CardLayout permite organizar paneles en forma de una pila 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
-        btn_buscar2.setBackground(new java.awt.Color(204, 204, 204));
-        btn_buscar2.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        btn_buscar2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/calculadora.png"))); // NOI18N
-        btn_buscar2.setText("CALCULADORA");
-        btn_buscar2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btn_buscar2.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        btn_buscar2.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
-        btn_buscar2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_buscar2ActionPerformed(evt);
-            }
-        });
-
         jButton3.setBackground(new java.awt.Color(204, 204, 204));
         jButton3.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/reloj.png"))); // NOI18N
@@ -276,9 +262,7 @@ CardLayout vista;//El CardLayout permite organizar paneles en forma de una pila 
                 .addComponent(jLabel2)
                 .addGap(184, 184, 184)
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 12, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(34, 34, 34)
-                .addComponent(btn_buscar2, javax.swing.GroupLayout.DEFAULT_SIZE, 131, Short.MAX_VALUE)
-                .addGap(37, 37, 37)
+                .addGap(202, 202, 202)
                 .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
                 .addContainerGap())
         );
@@ -292,9 +276,7 @@ CardLayout vista;//El CardLayout permite organizar paneles en forma de una pila 
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jButton3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
-                            .addComponent(btn_buscar2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addComponent(jButton3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(12, 12, 12))
         );
 
@@ -399,12 +381,6 @@ CardLayout vista;//El CardLayout permite organizar paneles en forma de una pila 
         formOne.show();
     }//GEN-LAST:event_btn_buscarActionPerformed
 
-    private void btn_buscar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_buscar2ActionPerformed
-   calculadora c=new calculadora();
-        c.setVisible(true);
-        dispose();
-    }//GEN-LAST:event_btn_buscar2ActionPerformed
-
     private void btn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn4ActionPerformed
           EMPLEADOS formOne = new EMPLEADOS();
         DesktopMain.add(formOne);
@@ -486,7 +462,6 @@ HVENTAS formOne = new HVENTAS();
     private javax.swing.JToggleButton btn4;
     private javax.swing.JToggleButton btn_alta;
     private javax.swing.JToggleButton btn_buscar;
-    private javax.swing.JToggleButton btn_buscar2;
     private javax.swing.JToggleButton btn_buscar3;
     private javax.swing.JToggleButton btn_buscar4;
     private javax.swing.JButton btn_salir;
