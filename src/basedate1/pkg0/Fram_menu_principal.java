@@ -11,6 +11,14 @@ import javax.swing.ImageIcon;
 import javax.swing.SwingUtilities;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
+import java.awt.Color;
+import java.awt.Frame;
+import java.awt.geom.RoundRectangle2D;
+import javax.script.ScriptEngine;
+import javax.script.ScriptEngineManager;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+
 
 public final class Fram_menu_principal extends javax.swing.JFrame {
     //Reloj1 reloj1=new Reloj1();//Instancia el panel del Main de Reloj
@@ -400,7 +408,7 @@ CardLayout vista;//El CardLayout permite organizar paneles en forma de una pila 
     }//GEN-LAST:event_btn_buscarActionPerformed
 
     private void btn_buscar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_buscar2ActionPerformed
-        // TODO add your handling code here:
+    
     }//GEN-LAST:event_btn_buscar2ActionPerformed
 
     private void btn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn4ActionPerformed
