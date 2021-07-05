@@ -128,7 +128,7 @@ public class Em2 extends javax.swing.JInternalFrame {
         jRadioButton3.setText("Buscar empleado por Teléfono");
 
         jRadioButton4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jRadioButton4.setText("Mostrar todo el resgitro");
+        jRadioButton4.setText("Mostrar todo el registro");
         jRadioButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jRadioButton4ActionPerformed(evt);
@@ -140,6 +140,8 @@ public class Em2 extends javax.swing.JInternalFrame {
         jTextField2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
 
         jTextField3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+
+        jButton1.setText("BUSCAR");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -164,7 +166,7 @@ public class Em2 extends javax.swing.JInternalFrame {
                                     .addComponent(jTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, 164, Short.MAX_VALUE)
                                     .addComponent(jTextField3)
                                     .addComponent(jTextField1))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 95, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
                                 .addComponent(jButton1)))
                         .addGap(110, 110, 110)))
                 .addContainerGap())

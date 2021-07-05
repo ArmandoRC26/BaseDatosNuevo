@@ -48,7 +48,7 @@ public class CONSULTAS extends javax.swing.JInternalFrame {
         );
         DesktopP1Layout.setVerticalGroup(
             DesktopP1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 426, Short.MAX_VALUE)
+            .addGap(0, 430, Short.MAX_VALUE)
         );
 
         jMenu1.setText("EMPLEADOS");
@@ -65,9 +65,29 @@ public class CONSULTAS extends javax.swing.JInternalFrame {
         jMenuBar1.add(jMenu1);
 
         jMenu2.setText("CLIENTES");
+        jMenu2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenu2MouseClicked(evt);
+            }
+        });
+        jMenu2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu2ActionPerformed(evt);
+            }
+        });
         jMenuBar1.add(jMenu2);
 
         jMenu3.setText("CUADROS");
+        jMenu3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenu3MouseClicked(evt);
+            }
+        });
+        jMenu3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu3ActionPerformed(evt);
+            }
+        });
         jMenuBar1.add(jMenu3);
 
         setJMenuBar(jMenuBar1);
@@ -87,12 +107,7 @@ public class CONSULTAS extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jMenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu1ActionPerformed
-    Em2 formOne = new Em2();
-       DesktopP1.add(formOne);
-        Dimension desktopSize = DesktopP1.getSize();
-        Dimension FrameSize = formOne.getSize();
-        formOne.setLocation((desktopSize.width - FrameSize.width)/2, (desktopSize.height- FrameSize.height)/2);
-        formOne.show();
+   
     }//GEN-LAST:event_jMenu1ActionPerformed
 
     private void jMenu1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu1MouseClicked
@@ -103,6 +118,33 @@ public class CONSULTAS extends javax.swing.JInternalFrame {
         formOne.setLocation((desktopSize.width - FrameSize.width)/2, (desktopSize.height- FrameSize.height)/2);
         formOne.show();
     }//GEN-LAST:event_jMenu1MouseClicked
+
+    private void jMenu2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenu2ActionPerformed
+
+    private void jMenu2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu2MouseClicked
+ CCLIENTES formOne = new CCLIENTES();
+       DesktopP1.add(formOne);
+        Dimension desktopSize = DesktopP1.getSize();
+        Dimension FrameSize = formOne.getSize();
+        formOne.setLocation((desktopSize.width - FrameSize.width)/2, (desktopSize.height- FrameSize.height)/2);
+        formOne.show();
+
+    }//GEN-LAST:event_jMenu2MouseClicked
+
+    private void jMenu3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu3MouseClicked
+ CCUADROS formOne = new CCUADROS();
+       DesktopP1.add(formOne);
+        Dimension desktopSize = DesktopP1.getSize();
+        Dimension FrameSize = formOne.getSize();
+        formOne.setLocation((desktopSize.width - FrameSize.width)/2, (desktopSize.height- FrameSize.height)/2);
+        formOne.show();
+    }//GEN-LAST:event_jMenu3MouseClicked
+
+    private void jMenu3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenu3ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
