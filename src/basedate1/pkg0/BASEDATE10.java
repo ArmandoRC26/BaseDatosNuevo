@@ -29,8 +29,9 @@ public class BASEDATE10 {
 } catch (Exception e) {
     // If Nimbus is not available, you can set the GUI to another look and feel.ee
 }
-         Inicio11 c=new Inicio11();
-        c.setVisible(true);
+       Frm_menu c=new Frm_menu();
+       c.setVisible(true);
+     
     }
 }
 
