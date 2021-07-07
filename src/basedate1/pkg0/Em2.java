@@ -9,16 +9,9 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.table.DefaultTableModel;
-
-/**
- *
- * @author arman
- */
 public class Em2 extends javax.swing.JInternalFrame {
 
     /**
@@ -28,29 +21,25 @@ public class Em2 extends javax.swing.JInternalFrame {
         initComponents();
         mostrardatos("");
     }
-    void mostrardatos(String valor){
+void mostrardatos(String valor){
         conectar cc=new conectar();
         Connection cn=cc.conexion();
         DefaultTableModel modelo=new DefaultTableModel();
        
         modelo.addColumn("Folio");
-         modelo.addColumn("Nombres");
+         modelo.addColumn("Nombre");
          modelo.addColumn("Apellido_Paterno");
-          modelo.addColumn("Apellido_Materno");
+         modelo.addColumn("Apellido_Materno");
          modelo.addColumn("Edad");
          modelo.addColumn("Teléfono");
+         
         
           
         jTable1.setModel(modelo);
         String sql="";
-        if (valor.equals(""))
-        {
-            
+        
             sql="SELECT * FROM r_empleados";
-        }
-        else{
-            sql="SELECT * FROM  r_empleados WHERE (Folio='"+valor+"')";
-        }  
+       
         
         String []datos=new String [6];
         try{
@@ -71,55 +60,7 @@ public class Em2 extends javax.swing.JInternalFrame {
         }catch(SQLException ex){
             Logger.getLogger(Em2.datos.class.getName()).log(Level.SEVERE,null,ex);
         }
-    
-
 }
-     void mostrardatos2(String valor){
-        conectar cc=new conectar();
-        Connection cn=cc.conexion();
-        DefaultTableModel modelo=new DefaultTableModel();
-       
-        modelo.addColumn("Folio");
-         modelo.addColumn("Nombres");
-         modelo.addColumn("Apellido_Paterno");
-          modelo.addColumn("Apellido_Materno");
-         modelo.addColumn("Edad");
-         modelo.addColumn("Teléfono");
-        
-          
-        jTable1.setModel(modelo);
-        String sql="";
-        if (valor.equals(""))
-        {
-            
-            sql="SELECT * FROM r_empleados";
-        }
-        else{
-            sql="SELECT * FROM  r_empleados WHERE (Folio='"+valor+"')";
-        }  
-        
-        String []datos=new String [6];
-        try{
-            Statement st=cn.createStatement();
-            ResultSet rs=st.executeQuery(sql);
-            while(rs.next()){
-           datos[0]=rs.getString(1);
-            datos[1]=rs.getString(2);
-            datos[2]=rs.getString(3);
-            datos[3]=rs.getString(4);
-            datos[4]=rs.getString(5);
-            datos[5]=rs.getString(6);
-            
-            
-            modelo.addRow(datos);
-            }
-            jTable1.setModel(modelo);
-        }catch(SQLException ex){
-            Logger.getLogger(Em2.datos.class.getName()).log(Level.SEVERE,null,ex);
-        }
-    
-     }
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -131,19 +72,12 @@ public class Em2 extends javax.swing.JInternalFrame {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
-        b1 = new javax.swing.JRadioButton();
-        b2 = new javax.swing.JRadioButton();
-        b3 = new javax.swing.JRadioButton();
-        b4 = new javax.swing.JRadioButton();
-        jTextField1 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setClosable(true);
         setIconifiable(true);
         setMaximizable(true);
         setResizable(true);
-        setTitle("EMPLEADOS");
-        setToolTipText("");
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -158,165 +92,39 @@ public class Em2 extends javax.swing.JInternalFrame {
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        b1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        b1.setText("Buscar empleado por Nombre");
-        b1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                b1ActionPerformed(evt);
-            }
-        });
-
-        b2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        b2.setText("Buscar empleado por Folio");
-
-        b3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        b3.setText("Buscar empleado por Teléfono");
-
-        b4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        b4.setText("Mostrar todo el registro");
-        b4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                b4ActionPerformed(evt);
-            }
-        });
-
-        jTextField1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
-            }
-        });
-
-        jButton1.setText("BUSCAR");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
+        jLabel1.setText("Buscar por nombre, Buscar por Folio, Buscar por telefono");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jScrollPane1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(38, 38, 38)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(b4)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(b1)
-                                            .addComponent(b3))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(b2)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 95, Short.MAX_VALUE)
-                                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(29, 29, 29)))
-                                .addComponent(jButton1)))
-                        .addGap(110, 110, 110)))
+                .addContainerGap()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 736, Short.MAX_VALUE)
                 .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(59, 59, 59)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 346, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(38, 38, 38)
-                .addComponent(b1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(b2)
-                    .addComponent(jButton1)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(b3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(b4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(22, 22, 22)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 106, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void b1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_b1ActionPerformed
-
-    private void b4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b4ActionPerformed
-     
-    }//GEN-LAST:event_b4ActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-   
-    
-    String num=jTextField1.getText();
-    
-    String consulta="";
-    if(b1.isSelected()==true)
-    {
-        consulta= "SELECT * FROM r_empleados WHERE Nombre='"+num+"'";
-    }
-    if(b1.isSelected()==true)
-    {
-            consulta= "SELECT * FROM r_empleados WHERE Nombre='"+num+"'";
-    }
-    if(b1.isSelected()==true)
-    {
-         consulta= "SELECT * FROM r_empleados WHERE Telefono='"+num+"'";
-    }
-        DefaultTableModel tabla= new DefaultTableModel();
-        String []titulos={"Folio","Nombre","Appelido_Paterno","Apellido_Materno","Edad","Teléfono",};
-        tabla.setColumnIdentifiers(titulos);
-        this.jTable1.setModel(tabla);
-         String sql="";
-        String []Datos= new String [6];
-        conectar cc=new conectar();
-        Connection cn=cc.conexion();
-           
-                String []datos=new String [6];
-        try{
-            Statement st=cn.createStatement();
-            ResultSet rs=st.executeQuery(sql);
-            while(rs.next()){
-           datos[0]=rs.getString(1);
-            datos[1]=rs.getString(2);
-            datos[2]=rs.getString(3);
-            datos[3]=rs.getString(4);
-            datos[4]=rs.getString(5);
-            datos[5]=rs.getString(6);
-            
-                tabla.addRow(Datos);
-            }
-        } catch (SQLException ex) {
-           
-        }
-        
-   
-   
-    
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JRadioButton b1;
-    private javax.swing.JRadioButton b2;
-    private javax.swing.JRadioButton b3;
-    private javax.swing.JRadioButton b4;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 
     private static class datos {

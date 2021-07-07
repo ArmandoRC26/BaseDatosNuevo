@@ -401,6 +401,7 @@ String id_marco="";
         conectar cc=new conectar();
         Connection cn=cc.conexion();
         try{
+            //este boton es para guardar datos
             PreparedStatement pst=cn.prepareStatement("INSERT INTO marco (id_marco,Modelo, Medida, Precio) VALUES(?,?,?,?)");
             pst.setString(1,jTextField1.getText());
             pst.setString(2,jTextField2.getText());

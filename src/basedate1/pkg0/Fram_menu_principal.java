@@ -61,7 +61,6 @@ CardLayout vista;//El CardLayout permite organizar paneles en forma de una pila 
         jSeparator2 = new javax.swing.JSeparator();
         jLabel2 = new javax.swing.JLabel();
         btn_buscar3 = new javax.swing.JToggleButton();
-        btn_buscar4 = new javax.swing.JToggleButton();
         pnl_vista_principal = new javax.swing.JPanel();
         DesktopMain = new javax.swing.JDesktopPane();
         jLabel3 = new javax.swing.JLabel();
@@ -240,19 +239,6 @@ CardLayout vista;//El CardLayout permite organizar paneles en forma de una pila 
             }
         });
 
-        btn_buscar4.setBackground(new java.awt.Color(204, 204, 204));
-        btn_buscar4.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        btn_buscar4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/calculadora.png"))); // NOI18N
-        btn_buscar4.setText("COTIZACIONES");
-        btn_buscar4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btn_buscar4.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        btn_buscar4.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
-        btn_buscar4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_buscar4ActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -264,9 +250,7 @@ CardLayout vista;//El CardLayout permite organizar paneles en forma de una pila 
                 .addComponent(jLabel2)
                 .addGap(305, 305, 305)
                 .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btn_buscar4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(129, 129, 129)
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 12, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(327, 327, 327))
         );
@@ -279,8 +263,7 @@ CardLayout vista;//El CardLayout permite organizar paneles en forma de una pila 
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButton3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(btn_buscar4, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jButton3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(12, 12, 12))
         );
 
@@ -430,15 +413,6 @@ CardLayout vista;//El CardLayout permite organizar paneles en forma de una pila 
         formOne.show();
     }//GEN-LAST:event_btn_buscar3ActionPerformed
 
-    private void btn_buscar4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_buscar4ActionPerformed
-Calculadora1  formOne = new Calculadora1();
-        DesktopMain.add(formOne);
-        Dimension desktopSize = DesktopMain.getSize();
-        Dimension FrameSize = formOne.getSize();
-        formOne.setLocation((desktopSize.width - FrameSize.width)/2, (desktopSize.height- FrameSize.height)/2);
-        formOne.show();      
-    }//GEN-LAST:event_btn_buscar4ActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -480,7 +454,6 @@ Calculadora1  formOne = new Calculadora1();
     public javax.swing.JToggleButton btn_alta;
     public javax.swing.JToggleButton btn_buscar;
     public javax.swing.JToggleButton btn_buscar3;
-    public javax.swing.JToggleButton btn_buscar4;
     public javax.swing.JButton btn_salir;
     public javax.swing.JButton jButton1;
     public javax.swing.JToggleButton jButton3;

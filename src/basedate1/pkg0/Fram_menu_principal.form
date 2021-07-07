@@ -348,9 +348,7 @@
                       <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="305" max="-2" attributes="0"/>
                       <Component id="jButton3" pref="115" max="32767" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="btn_buscar4" max="32767" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="129" max="-2" attributes="0"/>
                       <Component id="jSeparator2" min="-2" pref="12" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="327" max="-2" attributes="0"/>
                   </Group>
@@ -367,7 +365,6 @@
                               <Component id="jSeparator2" min="-2" pref="155" max="-2" attributes="0"/>
                               <Component id="jButton3" alignment="0" min="-2" pref="130" max="-2" attributes="0"/>
                           </Group>
-                          <Component id="btn_buscar4" alignment="0" min="-2" pref="130" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                   </Group>
@@ -428,26 +425,6 @@
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_buscar3ActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JToggleButton" name="btn_buscar4">
-              <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="cc" green="cc" red="cc" type="rgb"/>
-                </Property>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Arial" size="12" style="1"/>
-                </Property>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/imagenes/calculadora.png"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="COTIZACIONES"/>
-                <Property name="horizontalTextPosition" type="int" value="0"/>
-                <Property name="verticalAlignment" type="int" value="1"/>
-                <Property name="verticalTextPosition" type="int" value="1"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_buscar4ActionPerformed"/>
               </Events>
             </Component>
           </SubComponents>
